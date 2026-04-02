@@ -1,0 +1,70 @@
+Assignment: Deep Neural Networks
+
+------Objective:
+- Implement baseline model (Logistic Regression from scratch)
+  → Ek simple model jo sirf linear relation samajhta hai
+- Implement MLP (Deep Neural Network from scratch)
+  → Ek advanced model jisme layers hoti hain aur complex patterns seekhta hai
+- Compare both models
+  → Kaunsa better perform karta hai aur kyun
+
+-----Dataset:
+- Adult Income Dataset
+- Source: Kaggle / UCI
+- Problem Type: Binary Classification (income >50K or <=50K)
+  → Output sirf 2 classes me hoga (0 ya 1)
+
+------Steps:
+
+1. Load Dataset
+   - Read CSV file using pandas
+   → Data ko table format me load karna (rows = samples, columns = features)
+
+2. Data Preprocessing
+here we will use 2 libraries most importantly 
+WHY 2 libraries?
+///pandas = “data clean karo” 
+///sklearn = “model ke layak banao”
+   - Handle missing values
+     → Jo data missing hai use remove ya fill karna
+   - Encode categorical variables
+     → Text data ko numbers me convert karna (model text nahi samajhta)
+   - Scale features
+     → Sab values ko same range me lana (training fast hoti hai)
+   - Train-test split
+     → Data ko 2 parts me todna (train = seekhne ke liye, test = check karne ke liye)
+
+3. Baseline Model (Logistic Regression)
+   - Implement Logistic Regression from scratch
+     → Simple model jo probability predict karta hai
+   - Use sigmoid function
+     → Sigmoid output ko 0 aur 1 ke beech me convert karta hai (probability)
+   - Train using gradient descent
+     → Weights ko baar-baar update karke error kam karna
+
+4. MLP Model (Deep Neural Network)
+   - Input layer
+     → Yaha se data enter hota hai
+   - Hidden layer (ReLU)
+     → Ye layer important features seekhti hai
+     → ReLU negative values ko 0 bana deta hai
+   - Output layer (Sigmoid)
+     → Final prediction deta hai (0 ya 1)
+   - Forward propagation
+     → Data input se output tak flow karta hai
+   - Backpropagation
+     → Error ko peeche bhej kar weights update karte hain (learning process)
+
+5. Evaluation
+   - Accuracy comparison
+     → Kitne predictions sahi aaye
+   - Loss curves
+     → Training ke time error kam ho raha hai ya nahi
+   - Graphs
+     → Visual comparison (baseline vs MLP)
+
+6. Final Output
+   - Compare performance
+     → MLP better hai ya baseline
+   - Write analysis
+     → Kyun better hai, kitna better hai, kya challenges aaye
